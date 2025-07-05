@@ -1,7 +1,6 @@
 console.log("Lets write some javasript")
 let currentSong = new Audio();
 let songs;
-
 function secondsToMinutesSeconds(seconds) {
     if (isNaN(seconds) || seconds < 0) {
         return "00:00";
@@ -36,7 +35,7 @@ async function getSongs() {
 
 const playMusic = (track, pause = false) => {
     // let audio = new Audio(`http://127.0.0.1:5500/songs/`+track)
-    currentSong.src = "http://127.0.0.1:5500/songs/" + track
+    currentSong.src = "./songs/" + track
     if (!pause) {
         // console.log("audio---",audio);
         currentSong.play()
